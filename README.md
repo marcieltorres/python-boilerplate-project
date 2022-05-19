@@ -5,6 +5,8 @@ A python boilerplate project using poetry
 ## Technology and Resources
 
 - [Python 3.9](https://www.python.org/downloads/release/python-390/) - **pre-requisite**
+- [Docker](https://www.docker.com/get-started) - **pre-requisite**
+- [Docker Compose](https://docs.docker.com/compose/) - **pre-requisite**
 - [Poetry](https://python-poetry.org/) - **pre-requisite**
 
 *Please pay attention on **pre-requisites** resources that you must install/configure.*
@@ -13,9 +15,9 @@ A python boilerplate project using poetry
 
 Command | Docker | Locally | Description
 ---- | ------- | ------- | -------
-install | `-` | `make local/install` | to install
-tests | `-` | `make local/tests` | to run the tests with coverage
-run | `-` | `make local/run` | to run the project
+install | `make docker/install` | `make local/install` | to install
+tests | `make docker/tests` | `make local/tests` | to run the tests with coverage
+run | `make docker/run` | `make local/run` | to run the project
 
 **Helpful commands**
 
