@@ -1,0 +1,4 @@
+.github
+.vscode
+.pytest_cache
+*.md
