@@ -9,3 +9,4 @@ services:
       target: "development"
     volumes:
       - ".:/src"
+    env_file: .env
