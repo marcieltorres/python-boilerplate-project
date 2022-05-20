@@ -10,6 +10,13 @@ local/install:
 local/tests:
 	poetry run pytest --cov-report=html --cov-report=term --cov . 
 
+local/lint:
+	poetry run flake8 .
+	poetry run black --check .
+
+local/lint/fix:
+	poetry run black .
+
 local/run:
 	poetry run python src/main.py
 
@@ -29,6 +36,13 @@ docker/down:
 
 docker/test:
 	docker-compose run ${APP_NAME} poetry run pytest --cov-report=html --cov-report=term --cov .
+
+docker/lint:
+	docker-compose run ${APP_NAME} poetry run flake8 .
+	docker-compose run ${APP_NAME} poetry run black --check .
+
+docker/lint/fix:
+	docker-compose run ${APP_NAME} poetry run black .
 
 docker/run:
 	docker-compose run ${APP_NAME} poetry run python src/main.py

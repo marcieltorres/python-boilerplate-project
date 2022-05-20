@@ -132,3 +132,6 @@ dmypy.json
 # Poetry lock file
 # https://python-poetry.org/docs/basic-usage/#commit-your-poetrylock-file-to-version-control
 poetry.lock
+
+# Visual Studio Code
+.vscode
