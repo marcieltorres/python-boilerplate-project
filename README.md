@@ -15,6 +15,16 @@ A python boilerplate project using poetry
 
 ## How to install, run and test
 
+### Environment variables
+
+*Use this section to explain each env variable available on your application* 
+
+Variable | Description | Available Values | Default Value | Required
+--- | --- | --- | --- | ---
+ENV | The application enviroment |  `development / test / qa / prod` | `development` | Yes
+
+*Note: When you run the install command (using docker or locally), a .env file will be created automatically based on [env.template](env.template)*
+
 Command | Docker | Locally | Description
 ---- | ------- | ------- | -------
 install | `make docker/install` | `make local/install` | to install

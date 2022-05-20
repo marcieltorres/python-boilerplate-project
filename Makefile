@@ -4,7 +4,7 @@ APP_NAME="python-boilerplate-project"
 # COMMANDS TO RUN LOCALLY
 ################################
 
-local/install:
+local/install: generate-default-env-file
 	poetry install
 
 local/tests:
@@ -25,7 +25,7 @@ local/run:
 # COMMANDS TO RUN USING DOCKER (RECOMMENDED)
 ############################################
 
-docker/install:
+docker/install: generate-default-env-file
 	docker-compose build ${APP_NAME}
 
 docker/up:
@@ -46,3 +46,10 @@ docker/lint/fix:
 
 docker/run:
 	docker-compose run ${APP_NAME} poetry run python src/main.py
+
+##################
+# HEPFUL COMMANDS
+##################
+
+generate-default-env-file:
+	@if [ ! -f .env ]; then cp env.template .env; fi;
