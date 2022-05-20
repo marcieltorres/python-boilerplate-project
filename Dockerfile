@@ -6,7 +6,7 @@ COPY pyproject.toml .
 RUN pip install poetry
 
 FROM base AS dependencies
-RUN poetry install --only main
+RUN poetry install --no-dev
 
 FROM base AS development
 RUN poetry install
