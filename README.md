@@ -36,3 +36,7 @@ run | `make docker/run` | `make local/run` | to run the project
 **Helpful commands**
 
 *Please, check all available commands in the [Makefile](Makefile) for more information*.
+
+## Logging
+
+This project uses a simple way to configure the log with [logging.conf](logging.conf) to show the logs on the container output console.
