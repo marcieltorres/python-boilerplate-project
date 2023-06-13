@@ -4,7 +4,7 @@ A python boilerplate project using poetry
 
 ## Technology and Resources
 
-- [Python 3.9](https://www.python.org/downloads/release/python-390/) - **pre-requisite**
+- [Python 3.11](https://www.python.org/downloads/release/python-3110/) - **pre-requisite**
 - [Docker](https://www.docker.com/get-started) - **pre-requisite**
 - [Docker Compose](https://docs.docker.com/compose/) - **pre-requisite**
 - [Poetry](https://python-poetry.org/) - **pre-requisite**
