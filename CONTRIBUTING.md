@@ -36,7 +36,11 @@ Namespaces are one honking great idea -- let's do more of those!
 
 # Coding Style
 
-[![PEP20](https://img.shields.io/badge/code%20style-pep20-red.svg)](https://www.python.org/dev/peps/pep-0020/)
-[![PEP8](https://img.shields.io/badge/code%20style-pep8-orange.svg)](https://www.python.org/dev/peps/pep-0008/)
-[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
-[![bandit](https://img.shields.io/badge/code%20style-bandit-green.svg)](https://github.com/PyCQA/bandit)
+We are using [Ruff](https://github.com/astral-sh/ruff) to manage the coding style [rules](https://beta.ruff.rs/docs/rules/).
+
+Rule | Description
+--- | ---
+E,W | [pycode style](https://pypi.org/project/pycodestyle/)
+F | [pyflakes](https://pypi.org/project/pyflakes/) 
+I | [isort](https://pypi.org/project/isort/) 
+N | [pep8-naming](https://pypi.org/project/pep8-naming/) 

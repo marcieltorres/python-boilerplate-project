@@ -1,6 +1,5 @@
-from logging.config import fileConfig as logConfig
 from logging import getLogger
-
+from logging.config import fileConfig as logConfig
 
 logConfig("./logging.conf", disable_existing_loggers=False)
 logger = getLogger(__name__)
