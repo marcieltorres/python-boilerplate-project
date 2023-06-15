@@ -11,8 +11,8 @@ local/tests:
 	poetry run pytest --cov-report=html --cov-report=term --cov . 
 
 local/lint:
-	poetry run flake8 .
-	poetry run black --check .
+	poetry run ruff check .
+	poetry run ruff . --fix --exit-non-zero-on-fix
 
 local/lint/fix:
 	poetry run black .
@@ -38,11 +38,10 @@ docker/test:
 	docker-compose run ${APP_NAME} poetry run pytest --cov-report=html --cov-report=term --cov .
 
 docker/lint:
-	docker-compose run ${APP_NAME} poetry run flake8 .
-	docker-compose run ${APP_NAME} poetry run black --check .
+	docker-compose run ${APP_NAME} poetry run ruff check .
 
 docker/lint/fix:
-	docker-compose run ${APP_NAME} poetry run black .
+	docker-compose run ${APP_NAME} poetry run ruff . --fix --exit-non-zero-on-fix
 
 docker/run:
 	docker-compose run ${APP_NAME} poetry run python src/main.py

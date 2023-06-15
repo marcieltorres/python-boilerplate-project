@@ -135,3 +135,6 @@ poetry.lock
 
 # Visual Studio Code
 .vscode
+
+# Ruff Settings
+.ruff_cache
