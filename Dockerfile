@@ -14,3 +14,4 @@ COPY . .
 
 FROM dependencies AS production
 COPY src src
+COPY settings.toml src

@@ -9,6 +9,7 @@ A python boilerplate project using poetry
 - [Docker Compose](https://docs.docker.com/compose/) - **pre-requisite**
 - [Poetry](https://python-poetry.org/) - **pre-requisite**
 - [Ruff](https://github.com/astral-sh/ruff)
+- [Dynaconf](https://www.dynaconf.com/)
 
 *Please pay attention on **pre-requisites** resources that you must install/configure.*
 
