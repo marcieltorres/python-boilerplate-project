@@ -12,7 +12,7 @@ dynaconf = "3.2.0"
 [tool.poetry.dev-dependencies]
 pytest = "7.4.0"
 pytest-cov = "^4.1.0"
-ruff = "^0.0.278"
+ruff = "^0.0.280"
 
 [tool.pytest.ini_options]
 testpaths = ["tests",]
