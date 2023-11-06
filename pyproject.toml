@@ -2,7 +2,7 @@
 name = "python-boilerplate-project"
 version = "0.1.0"
 description = "A python boilerplate project using poetry"
-authors = [""]
+authors = ["Authors Name <authorsmail@>"]
 license = "MIT"
 
 [tool.poetry.dependencies]
