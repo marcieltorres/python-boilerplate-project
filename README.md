@@ -9,7 +9,6 @@ A python boilerplate project using poetry
 - [Docker Compose](https://docs.docker.com/compose/) - **pre-requisite**
 - [Poetry](https://python-poetry.org/) - **pre-requisite**
 - [Ruff](https://github.com/astral-sh/ruff)
-- [Dynaconf](https://www.dynaconf.com/)
 
 *Please pay attention on **pre-requisites** resources that you must install/configure.*
 
@@ -40,3 +39,7 @@ run | `make docker/run` | `make local/run` | to run the project
 ## Logging
 
 This project uses a simple way to configure the log with [logging.conf](logging.conf) to show the logs on the container output console.
+
+## Settings
+
+This project uses a simple way to manage the settings with [settings.conf](settings.conf) and [ConfigParser](https://docs.python.org/3/library/configparser.html) using a [config class](./src/config/settings.py).

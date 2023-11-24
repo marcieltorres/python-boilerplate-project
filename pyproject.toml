@@ -7,7 +7,6 @@ license = "MIT"
 
 [tool.poetry.dependencies]
 python = "^3.11"
-dynaconf = "3.2.3"
 
 [tool.poetry.dev-dependencies]
 pytest = "7.4.3"
@@ -16,6 +15,7 @@ ruff = "^0.0.291"
 
 [tool.pytest.ini_options]
 testpaths = ["tests",]
+pythonpath = ["src",]
 
 [tool.coverage.run]
 branch = true
