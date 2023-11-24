@@ -8,14 +8,13 @@ local/install: generate-default-env-file
 	poetry install
 
 local/tests:
-	poetry run pytest --cov-report=html --cov-report=term --cov . 
+	poetry run pytest -s --cov-report=html --cov-report=term --cov . 
 
 local/lint:
 	poetry run ruff check .
-	poetry run ruff . --fix --exit-non-zero-on-fix
-
+	
 local/lint/fix:
-	poetry run black .
+	poetry run ruff . --fix --exit-non-zero-on-fix
 
 local/run:
 	poetry run python src/main.py
