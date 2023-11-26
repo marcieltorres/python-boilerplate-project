@@ -1,4 +1,6 @@
 APP_NAME="python-boilerplate-project"
+IMAGE_NAME="python-boilerplate-project"
+VERSION="latest"
 
 ################################
 # COMMANDS TO RUN LOCALLY
@@ -18,7 +20,6 @@ local/lint/fix:
 
 local/run:
 	poetry run python src/main.py
-
 
 ############################################
 # COMMANDS TO RUN USING DOCKER (RECOMMENDED)
@@ -44,6 +45,16 @@ docker/lint/fix:
 
 docker/run:
 	docker-compose run ${APP_NAME} poetry run python src/main.py
+
+####################################
+# DOCKER IMAGE COMMANDS
+####################################
+
+docker/image/build:
+	docker build . --target production -t ${IMAGE_NAME}:${VERSION}
+
+docker/image/push:
+	docker push ${IMAGE_NAME}:${VERSION}
 
 ##################
 # HEPFUL COMMANDS
