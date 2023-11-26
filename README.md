@@ -20,7 +20,7 @@ A python boilerplate project using poetry
 
 Variable | Description | Available Values | Default Value | Required
 --- | --- | --- | --- | ---
-ENV | The application enviroment |  `development / test / qa / prod` | `development` | Yes
+ENV | The application enviroment |  `dev / test / qa / prod` | `dev` | Yes
 
 *Note: When you run the install command (using docker or locally), a .env file will be created automatically based on [env.template](env.template)*
 
