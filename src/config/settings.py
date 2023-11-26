@@ -11,7 +11,7 @@ class Settings:
     def __init__(self, file: str = 'settings.conf'):
         self.config_parser = ConfigParser()
         self.config_parser.read(file)
-        self.env = getenv('ENV', 'development')
+        self.env = getenv('ENV', 'dev')
 
     def get(self, name: str, default_value: Any = None) -> Any:
         return self._get_from_section(self.env, name) or self._get_from_section('default', name) or default_value
