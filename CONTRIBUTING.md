@@ -33,7 +33,6 @@ Namespaces are one honking great idea -- let's do more of those!
 - [DRY](http://deviq.com/don-t-repeat-yourself/) - Don't repeat yourself.
 - [KISS](https://deviq.com/keep-it-simple/) - Keep it simple stupid.
 
-
 # Coding Style
 
 We are using [Ruff](https://github.com/astral-sh/ruff) to manage the coding style [rules](https://beta.ruff.rs/docs/rules/).
@@ -41,6 +40,7 @@ We are using [Ruff](https://github.com/astral-sh/ruff) to manage the coding styl
 Rule | Description
 --- | ---
 E,W | [pycode style](https://pypi.org/project/pycodestyle/)
-F | [pyflakes](https://pypi.org/project/pyflakes/) 
-I | [isort](https://pypi.org/project/isort/) 
-N | [pep8-naming](https://pypi.org/project/pep8-naming/) 
+F | [pyflakes](https://pypi.org/project/pyflakes/)
+I | [isort](https://pypi.org/project/isort/)
+N | [pep8-naming](https://pypi.org/project/pep8-naming/)
+S | [flake8-bandit](https://pypi.org/project/flake8-bandit/)
