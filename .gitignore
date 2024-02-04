@@ -138,3 +138,22 @@ poetry.lock
 
 # Ruff Settings
 .ruff_cache
+
+# Static document files
+*.txt
+*.csv
+*.xls
+*.Numbers
+*.doc
+*.Pages
+*.odt
+*.ODT
+*.ods
+*.ODS
+*.pdf
+*.zip
+*.rar
+
+# Secrets and credentials
+*.pem
+*.credentials
