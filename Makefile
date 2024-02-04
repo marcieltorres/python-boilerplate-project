@@ -1,3 +1,7 @@
+# loading and exporting all env vars from .env file automatically
+include .env
+export $(shell sed 's/=.*//' .env)
+
 APP_NAME="python-boilerplate-project"
 IMAGE_NAME="python-boilerplate-project"
 VERSION="latest"
@@ -35,7 +39,7 @@ docker/down:
 	docker-compose down --remove-orphans
 
 docker/test:
-	docker-compose run ${APP_NAME} poetry run pytest --cov-report=html --cov-report=term --cov .
+	PYTHONPATH='.' docker-compose run ${APP_NAME} poetry run pytest --cov-report=html --cov-report=term --cov .
 
 docker/lint:
 	docker-compose run ${APP_NAME} poetry run ruff check .
