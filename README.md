@@ -20,7 +20,8 @@ A python boilerplate project using poetry
 
 Variable | Description | Available Values | Default Value | Required
 --- | --- | --- | --- | ---
-ENV | The application enviroment |  `dev / test / qa / prod` | `dev` | Yes
+ENV | The application enviroment | `dev / test / qa / prod` | `dev` | Yes
+PYTHONPATH | Provides guidance to the Python interpreter about where to find libraries and applications | [ref](https://docs.python.org/3/using/cmdline.html#envvar-PYTHONPATH) | `.` | Yes
 
 *Note: When you run the install command (using docker or locally), a .env file will be created automatically based on [env.template](env.template)*
 

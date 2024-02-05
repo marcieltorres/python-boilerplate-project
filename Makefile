@@ -1,3 +1,9 @@
+# loading and exporting all env vars from .env file automatically
+ifneq (,$(wildcard ./.env))
+    include .env
+    export
+endif
+
 APP_NAME="python-boilerplate-project"
 IMAGE_NAME="python-boilerplate-project"
 VERSION="latest"
