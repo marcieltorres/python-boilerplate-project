@@ -16,7 +16,7 @@ A python boilerplate project using poetry
 
 ### Environment variables
 
-*Use this section to explain each env variable available on your application* 
+*Use this section to explain each env variable available on your application*
 
 Variable | Description | Available Values | Default Value | Required
 --- | --- | --- | --- | ---
