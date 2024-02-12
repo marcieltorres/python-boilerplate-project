@@ -7,6 +7,8 @@ endif
 APP_NAME="python-boilerplate-project"
 IMAGE_NAME="python-boilerplate-project"
 VERSION="latest"
+MAIN_ENTRYPOINT="src/main.py"
+
 
 ################################
 # COMMANDS TO RUN LOCALLY
@@ -25,7 +27,7 @@ local/lint/fix:
 	poetry run ruff . --fix
 
 local/run:
-	poetry run python src/main.py
+	poetry run python ${MAIN_ENTRYPOINT}
 
 ############################################
 # COMMANDS TO RUN USING DOCKER (RECOMMENDED)
@@ -47,10 +49,10 @@ docker/lint:
 	docker-compose run ${APP_NAME} poetry run ruff check .
 
 docker/lint/fix:
-	docker-compose run ${APP_NAME} poetry run ruff . --fix --exit-non-zero-on-fix
+	docker-compose run ${APP_NAME} poetry run ruff . --fix
 
 docker/run:
-	docker-compose run ${APP_NAME} poetry run python src/main.py
+	docker-compose run ${APP_NAME} poetry run python ${MAIN_ENTRYPOINT}
 
 ####################################
 # DOCKER IMAGE COMMANDS
