@@ -18,7 +18,7 @@ local/install: generate-default-env-file
 	poetry install
 
 local/tests:
-	poetry run pytest -s --cov-report=html --cov-report=term --cov .
+	poetry run pytest -s --cov-report=html --cov-report xml:coverage.xml --cov-report=term --cov .
 
 local/lint:
 	poetry run ruff check .
@@ -43,7 +43,7 @@ docker/down:
 	docker-compose down --remove-orphans
 
 docker/test:
-	docker-compose run ${APP_NAME} poetry run pytest --cov-report=html --cov-report=term --cov .
+	docker-compose run ${APP_NAME} poetry run pytest --cov-report=html --cov-report xml:coverage.xml --cov-report=term --cov .
 
 docker/lint:
 	docker-compose run ${APP_NAME} poetry run ruff check .
