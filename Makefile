@@ -58,7 +58,7 @@ docker/lint:
 	$(DOCKER_COMPOSE) run ${APP_NAME} poetry run ruff check .
 
 docker/lint/fix:
-	$(DOCKER_COMPOSE) run ${APP_NAME} poetry run ruff . --fix
+	$(DOCKER_COMPOSE) run ${APP_NAME} poetry run ruff check . --fix
 
 docker/run:
 	$(DOCKER_COMPOSE) run ${APP_NAME} poetry run python ${MAIN_ENTRYPOINT}
