@@ -16,6 +16,9 @@ class Settings:
     def get(self, name: str, default_value: Any = None) -> Any:
         return self._get_from_section(self.env, name) or self._get_from_section('default', name) or default_value
 
+    def get_from_env(self, name: str, default_value: Any = None) -> Any:
+        return getenv(name, default_value)
+
     def _get_from_section(self, section: str, var: str) -> Any:
         if section in self.config_parser and var in self.config_parser[section]:
             return self.config_parser[section][var]

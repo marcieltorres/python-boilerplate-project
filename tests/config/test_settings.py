@@ -39,3 +39,11 @@ class SettingsTest(TestCase):
     def test_get_setting_value_from_dev_env_with_success(self):
         dev_settings = Settings(file='./tests/config/settings_to_test.conf')
         self.assertEqual(dev_settings.get('app_var'), 'dev-app-var')
+
+    @mock.patch.dict(os.environ, {'name': 'value'}, clear=True)
+    def test_get_value_from_env_var_with_success(self):
+        self.assertEqual(self.settings.get_from_env('name'), 'value')
+
+    @mock.patch.dict(os.environ, {'name1': 'value'}, clear=True)
+    def test_get_default_value_from_env_var_with_success(self):
+        self.assertEqual(self.settings.get_from_env('name', 'default'), 'default')
