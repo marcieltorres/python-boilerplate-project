@@ -1,4 +1,3 @@
-version: "3.4"
 services:
   python-boilerplate-project:
     tty: true
