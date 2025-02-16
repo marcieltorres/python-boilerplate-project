@@ -4,14 +4,15 @@ version = "0.1.0"
 description = "A python boilerplate project using poetry"
 authors = ["Authors Name <authorsmail@>"]
 license = "MIT"
+package-mode = false
 
 [tool.poetry.dependencies]
 python = "^3.11"
 
-[tool.poetry.dev-dependencies]
+[tool.poetry.group.dev.dependencies]
 pytest = "^8.0.0"
 pytest-cov = "^6.0.0"
-ruff = "^0.8.1"
+ruff = "^0.9.6"
 
 [tool.pytest.ini_options]
 testpaths = ["tests",]
