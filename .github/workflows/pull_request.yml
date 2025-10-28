@@ -1,4 +1,6 @@
 name: pull_request
+permissions:
+  contents: read
 on: [pull_request]
 jobs:
   run_tests_and_lint:
