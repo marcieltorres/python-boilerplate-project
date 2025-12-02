@@ -10,7 +10,7 @@ package-mode = false
 python = "^3.11"
 
 [tool.poetry.group.dev.dependencies]
-pytest = "^8.0.0"
+pytest = "^9.0.1"
 pytest-cov = "^7.0.0"
 ruff = "^0.14.3"
 
